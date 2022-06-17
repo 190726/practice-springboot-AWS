@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Posts 전체 목록</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<h1>Posts 전체 목록</h1>
+<div>
+    <a href="/posts/save" role="button">글등록</a>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>저자</th>
+            <th>최종수정일</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="post : ${posts}">
+            <td ><a th:text="${post.id}"  th:href="@{/posts/update/{param}(param=${post.id})}">id</a></td>
+            <td th:text="${post.title}">title</td>
+            <td th:text="${post.author}">author</td>
+            <td th:text="${post.modifiedDate}">modifiedDate</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Posts 등록하기</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<h1>Posts 등록하기</h1>
+<div>
+    <form>
+        <div>
+            <input type="text" id="title" placeholder="제목을 입력하세요">
+            <input type="text" id="content" placeholder="내용을 입력하세요">
+            <input type="text" id="author" placeholder="저자를 입력하세요">
+        </div>
+    </form>
+    <a href="/posts/list" role="button">취소</a>
+    <button type="button" id="btn-save">등록</button>
+</div>
+<script src="/js/app/posts/posts-save.js"></script>
+</body>
+</html>
