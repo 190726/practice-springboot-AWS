@@ -16,26 +16,4 @@ public class App {
         SpringApplication.run(App.class, args);
     }
 
-    @RestController
-    class HelloController {
-
-        @GetMapping("/hello")
-        public String hello() {
-            return "hello";
-        }
-
-        @GetMapping("/hello/dto")
-        public HelloResponseDto helloDto(@RequestParam("name") String name,
-                                         @RequestParam("amount") int amount){
-            return new HelloResponseDto(name, amount);
-        }
-    }
-
-    @Getter
-    @RequiredArgsConstructor
-    static class HelloResponseDto{
-        private final String name;
-        private final int amount;
-    }
-
 }
