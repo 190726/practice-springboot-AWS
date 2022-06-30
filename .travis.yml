@@ -37,6 +37,7 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID # Travis repo settings 에 설정된 값
   secret_access_key: $AWS_SECRET_ACCESS_KEY # Travis repo settings 에 설정된 값
   bucket: sixstar6-aws-build # s3 버킷
+  key: springboot-ws-started.zip # S3 버킷에 저장된 springboot-webservice.zip 파일을 EC2로 배포
   bundle_type: zip
   application: springboot-ws-started # 웹 콘솔에서 등록한 CodeDeploy 애플리케이션
   deployment_group: springboot-ws-started-group
