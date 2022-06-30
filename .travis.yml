@@ -33,7 +33,16 @@ deploy:
   local_dir: deploy # before_deploy 에서 생성한 디렉토리
   wait-until-deployed: true
 
-
+  -provider: codedeploy
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: sixstar6-aws-build
+  key: springboot-ws-started.zip
+  bundle_type: zip
+  application: springboot-ws-started
+  deployment_group: springboot-ws-started-group
+  region: ap-northeast-2
+  wait-until-deployed: true
 
 # CI 실행 완료시 메일로 알람
 notifications:
