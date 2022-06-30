@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 @Getter
 public class PostListResponseDto {
+
     private Long id;
     private String title;
     private String author;
