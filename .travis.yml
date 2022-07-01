@@ -31,7 +31,7 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: sixstar6-aws-build
-  key: deploy/springboot-ws-started.zip
+  key: springboot-ws-started.zip
   bundle_type: zip
   application: springboot-ws-started
   deployment_group: springboot-ws-started-group
