@@ -26,8 +26,9 @@ before_deploy:
   - cd ../ && mkdir -p deploy
   - mv before-deploy/before-deploy.zip deploy/springboot-ws-started.zip
 
+
 deploy:
-  - provider: s3
+  provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID # Travis repo settings 에 설정된 값
   secret_access_key: $AWS_SECRET_ACCESS_KEY # Travis repo settings 에 설정된 값
   bucket: sixstar6-aws-build # s3 버킷
@@ -36,8 +37,6 @@ deploy:
   acl: private # zip 파일 접근을 private 으로
   local_dir: deploy # before_deploy 에서 생성한 디렉토리
   wait-until-deployed: true
-
-
 
 # CI 실행 완료시 메일로 알람
 notifications:
